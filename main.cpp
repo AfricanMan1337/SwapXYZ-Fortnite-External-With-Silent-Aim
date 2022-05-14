@@ -650,7 +650,7 @@ Vector3 ProjectWorldToScreen69(Vector3 WorldLocation, Vector3 camrot)
 	auto chain69 = read<uintptr_t>(Localplayer + 0xa8);
 	uint64_t chain699 = read<uintptr_t>(chain69 + 8);
 
-	Camera.x = read<float>(chain699 + 0x9F4); // 0x7E8 //camera pitch  watch out for x and y swapped 4u
+	Camera.x = read<float>(chain699 + 0x9F8); // 0x7E8 //camera pitch  watch out for x and y swapped 4u
 	Camera.y = read<float>(Rootcomp + 0x18C);  //camera yaw
 
 	float test = asin(Camera.x);
@@ -677,7 +677,7 @@ Vector3 ProjectWorldToScreen69(Vector3 WorldLocation, Vector3 camrot)
 	if (vTransformed.z < 1.f)
 		vTransformed.z = 1.f;
 
-	float zoom = read<float>(chain699 + 0x6E8);
+	float zoom = read<float>(chain699 + 0x7E8);
 
 	FovAngle = 80.0f / (zoom / 1.19f);
 	float ScreenCenterX = Settings::MajorValues::ScreenCenterX;
