@@ -1059,8 +1059,8 @@ void ActorLoop()
 					
 					
 					
-							//*(Vector3*)((uintptr_t)thingy + 0x2B9 + 0x350) = { NewPlayerLocationX, NewPlayerLocationY, 0 };
-							write<Vector3>((uintptr_t)index + 0x2B9 + 0x350, Vector3(NewPlayerLocationX, NewPlayerLocationY, 0));
+						
+							write<Vector3>((uintptr_t)index + 0x2C8 + 0x368, Vector3(NewPlayerLocationX, NewPlayerLocationY, 0));
 						
 					
 				}
