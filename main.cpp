@@ -974,14 +974,14 @@ void ActorLoop()
 		int niggaid = read<int>(CurrentActor + offset_playerid);
 		uint32_t object_id = read<uint32_t>(CurrentActor + 0x18);
 		
-		if (niggaid == Localplayer || niggaid == localplayerID)
+		if (niggaid == Localplayer || niggaid == localplayerID || niggaid == 97592757 )
 		{
 			uint64_t CurrentActorRootComponent = read<uint64_t>(CurrentActor + 0x188);
 			uint64_t currentactormesh = read<uint64_t>(CurrentActor + 0x2F0);
 			int MyTeamId = read<int>(PlayerState + 0x1010);
 			DWORD64 otherPlayerState = read<uint64_t>(CurrentActor + 0x290);
 			int ActorTeamId = read<int>(otherPlayerState + 0x1010);
-			Vector3 Headpos = GetBoneWithRotation(currentactormesh, 98);
+			Vector3 Headpos = GetBoneWithRotation(currentactormesh, 778);
 			Localcam = CameraEXT;
 			uintptr_t CurrentWeapon = read<uintptr_t>(LocalPawn + 0x790); //CurrentWeapon Offset
 			uintptr_t WeaponAssest = read<uintptr_t>(CurrentWeapon + 0x3D8); //WeaponData  Offset
